@@ -1,0 +1,15 @@
+<html>
+<center>
+<form action="/foodproject/edit_picture" method="post" enctype="multipart/form-data">
+<input type="hidden" name="dishid" value="<%=data.dishid %>">
+<h1><%=data.fooditem%></h1><br><br>
+<img src="/images/<%=data.picture %>" width="350"><br><br>
+<b>Upload new Picture</b><br><br>
+<input type="file" required name="picture"><br><br>
+<input type="submit" value="Upload Image">
+
+
+</form>
+
+</center>
+</html>

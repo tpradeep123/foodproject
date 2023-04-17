@@ -1,0 +1,57 @@
+<style>
+
+    .maincontainer{
+        width: 100%;
+        height: 100vh;
+    
+    
+    }
+
+    .navbox{
+display: flex;
+align-items: center;
+   width: 100%;
+   height: 8vh;
+    background-color: #34495e;
+    
+    
+    }
+</style>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+                      <link rel="preconnect" href="https://fonts.googleapis.com">
+                      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    </head>
+
+    <div class="maincontainer">
+        <div class="navbox">
+      <div style="width: 40px; height:40px;padding: 10px; align-self: center;"><img src="/images/food_logo.png" style="width: 40px;"></div>
+      <div style="color: #ffdd59;font-family:Poppins;font-size:25px;letter-spacing: 2;font-weight:bold;padding: 20px;">food court</div>
+    <div style="width: 70%;display: flex;justify-content: center;align-items: center;">
+    
+        <a href="/foodproject/food" target="mw" style="text-decoration:none;color: #ffdd59;font-family:Poppins;font-size:13px;letter-spacing: 2;margin-right: 7%;">Add books</a>
+        <a href="/foodproject/fetch_all_food" target="mw" style="text-decoration:none;color: #ffdd59;font-family:Poppins;font-size:13px;letter-spacing: 2;margin-right: 7%;">Book list</a>
+        <a href="/foodadmin/logout" target="_blank"style="text-decoration:none;color: #ffdd59;font-family:Poppins;font-size:13px;letter-spacing: 2;margin-right: 7%;">Logout</a>
+
+       </div>
+       <div style="text-decoration:none;color: #ffdd59;font-family:Poppins;font-size:13px;letter-spacing: 2;margin-right: 1%;">
+       <%= admin.adminname %>
+       </div>
+       <div>
+        <img src="/images/<%=admin.picture%>" width="50px" style="border-radius:15px;">
+       </div>
+    </div>
+    
+    <iframe width="100%" height="90%" name="mw" frameborder="0"></iframe>
+    </div>
+
+
+</html>

@@ -1,0 +1,189 @@
+<style>
+
+    .maincontainer{
+    height: auto;
+    width: 100vw;
+    background-color: #2f3640;
+        display: flex;
+       justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-family: Poppins;
+    }
+    
+    .box{
+    width: 900px;
+    height: auto;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    
+    }
+    
+    .headingdiv{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    }
+    
+    .centerstyle{
+    
+      display: flex;
+      justify-content: center;
+    }
+    
+    
+    </style>
+    
+    
+    <html>
+    
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="/javascripts/food_project.js"></script>
+    </head>
+    <div class="maincontainer">
+      <div class="box">
+        <div class="headingdiv">
+          <div>
+      <img src="/images/food_logo.png" width="50" height="50" />
+      <span style="letter-spacing:1;font-size: 24px;font-weight:bold;">Taj hotel</span>
+      </div>
+      <div>
+      <a href="/foodproject/fetch_all_food" style="text-decoration:none;">
+        <img src="/images/list.png" width="50" height="50" />
+        </a>
+        </div>
+    </div>
+    
+    <form class="row g-3" action="/foodproject/submit_food_details" method="post" enctype="multipart/form-data">
+        <div class="col-md-6" >
+
+        <label for="fooditemid" class="form-label"><b><h5 >food Type</h5></b></label>
+        <select name="foodid" id="foodtype" class="form-select" aria-label="Default select example">
+          <option selected>Select food</option>
+          </select>
+          </div>
+       
+          <div class="col-md-6" >
+        <label for="fooditemid" class="form-label"><b><h5 >food item</h5></b></label>
+        <select name="fooditemid" id="fooditem" class="form-select" aria-label="Default select example">
+          <option selected>Select food items</option>
+         </select>
+      </div>
+                
+      <div class="col-md-6" style="display: flex;flex-direction:column;">
+        <div><b><h5 >Status</h5></b></div>
+        <div style="display:flex;flex-direction:row;justify-content: space-evenly;">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="Veg" name="status1" id="status1">
+          <label class="form-check-label" for="status1">
+          <b><h5 style="color: green" > Veg</h5></b>
+          </label>
+        </div>
+  
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="Non veg" name="status1" id="status1">
+          <label class="form-check-label" for="status1">
+            <b><h5 style="color: red">Non veg</h5></b>
+          </label>
+        </div>
+        
+        </div>
+        </div>
+      
+        <div class="col-md-6" style="display: flex;flex-direction:column;">
+          <div><b><h5 >Status</h5></b></div>
+          <div style="display:flex;flex-direction:row;justify-content: space-evenly;">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Available" name="status2" id="status2">
+            <label class="form-check-label" for="status2">
+            <b><h5>Available</h5></b>
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="Not Available" name="status2" id="status2">
+            <label class="form-check-label" for="status2">
+              <b><h5 >Not Available</h5></b>
+            </label>
+          </div>
+          
+          </div>
+          </div>
+        
+
+        <div class="col-md-12">
+          <label for="discription" class="form-label"><b><h5 >Discription</h5></b></label>
+          <input name="discription" type="text" class="form-control" id="discription">
+        </div>
+    
+        
+        <div class="col-md-6">
+          <label for="price" class="form-label"><b><h5 >Price</h5></b></label>
+          <input name="price" type="text" class="form-control" id="price">
+        </div>
+    
+        <div class="col-md-6">
+          <label for="offer" class="form-label"><b><h5 >Offer</h5></b></label>
+          <input name="offer" type="text" class="form-control" id="offer">
+        </div>
+    
+        
+        <div class="col-md-12 row g-3" style="display: flex;flex-direction:column;">
+          <div class="col-md-6">
+            <label for="picture" class="form-label"><b><h5 >Picture</h5></b></label>
+            <input name="picture" class="form-control" type="file" id="picture">
+    
+          </div>
+    
+          <div class="col-md-12" style="display: flex;flex-direction:row;">
+
+        <div class="col-md-6 centerstyle">
+    
+          <button style="width:60%;" type="submit" class="btn btn-primary">Submit</button>
+          
+        </div>
+    
+        <div class="col-md-6 centerstyle">
+    
+          <button style="width:60%;" type="reset" class="btn btn-primary">Reset</button>
+          
+        </div>
+
+        
+       
+      </div>
+      </div>
+      <div class="col-md-12 centerstyle">
+
+        <% if(status==1){%>
+          <span style="color: green;font-size: 14px;"><%=message%></span>
+          <%} else if (status==0){%>
+          <span style="color: red;font-size: 14px;"><%=message%></span>
+          <% } %>
+         
+       </div>
+    </div>
+      </div>
+    </form>
+
+    
+      
+    </div>
+    
+    
+    </div>
+
+    
+    
+    </html>
